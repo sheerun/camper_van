@@ -113,7 +113,7 @@ module CamperVan
     # msg - the IRC PRIVMSG message contents
     #
     def privmsg(msg)
-
+      msg = msg.force_encoding('utf-8')
       # convert twitter urls to tweets
       if msg =~ %r(^https://twitter.com/(\w+)/status/(\d+)$)
         room.tweet(msg) { } # async, no-op callback

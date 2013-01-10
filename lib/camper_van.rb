@@ -4,6 +4,9 @@ require "eventmachine"
 require "firering"
 require "logging"
 
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
 module CamperVan
   require "camper_van/debug_proxy"        # debug proxy
 
